@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepPoint - Your Results</title>
+    <link rel="stylesheet" href="results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-book-open"></i> PrepPoint
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pro.html">Home</a></li>
+                <li><a href="new.html">Mock Tests</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="#" class="active">Results</a></li>
+                <!-- <li><a href="contactus.html">Contact Us</a></li> -->
+            </ul>
+        </nav>
+        <div class="login-btn">
+            <button><i class="fas fa-sign-in-alt"></i> Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Your Results</h1>
+            <p>Track your academic progress and performance analytics. Gain insights into your strengths and areas for improvement to optimize your study strategy and achieve your educational goals.</p>
+        </section>
+
+        <section class="performance-summary">
+            <h2>Performance Summary</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Overall Score</h3>
+                        <div class="stat-value">85%</div>
+                        <div class="stat-change positive"><i class="fas fa-arrow-up"></i> 5% from last</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Completed Tests</h3>
+                        <div class="stat-value">12</div>
+                        <div class="stat-note">Total assessments</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Study Time</h3>
+                        <div class="stat-value">42 hrs</div>
+                        <div class="stat-change positive"><i class="fas fa-arrow-up"></i> 8 hrs this week</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Accuracy</h3>
+                        <div class="stat-value">78%</div>
+                        <div class="stat-change negative"><i class="fas fa-arrow-down"></i> 2% from last</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-tests">
+            <div class="section-header">
+                <h2>Recent Test Results</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Test Name</th>
+                            <th>Date</th>
+                            <th>Score</th>
+                            <th>Performance</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Advanced Calculus</td>
+                            <td>May 15, 2025</td>
+                            <td>92%</td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 92%"></div>
+                                </div>
+                            </td>
+                            <td><button class="view-details-btn">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>Organic Chemistry</td>
+                            <td>May 10, 2025</td>
+                            <td>78%</td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 78%"></div>
+                                </div>
+                            </td>
+                            <td><button class="view-details-btn">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>World History</td>
+                            <td>May 5, 2025</td>
+                            <td>85%</td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </td>
+                            <td><button class="view-details-btn">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>English Literature</td>
+                            <td>April 28, 2025</td>
+                            <td>88%</td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 88%"></div>
+                                </div>
+                            </td>
+                            <td><button class="view-details-btn">View Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="performance-analysis">
+            <h2>Subject Performance Analysis</h2>
+            <div class="analysis-container">
+                <div class="chart-container">
+                    <canvas id="subjectChart"></canvas>
+                </div>
+                <div class="insights-container">
+                    <h3>Key Insights</h3>
+                    <div class="insight-item">
+                        <div class="insight-icon strength">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="insight-content">
+                            <h4>Strengths</h4>
+                            <p>Mathematics and Physics show consistent high performance. Continue with current study approach.</p>
+                        </div>
+                    </div>
+                    <div class="insight-item">
+                        <div class="insight-icon improvement">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="insight-content">
+                            <h4>Areas for Improvement</h4>
+                            <p>Chemistry scores have decreased by 5% since last month. Consider additional practice in organic reactions.</p>
+                        </div>
+                    </div>
+                    <div class="insight-item">
+                        <div class="insight-icon recommendation">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="insight-content">
+                            <h4>Recommendations</h4>
+                            <p>Allocate 30% more study time to Biology to improve understanding of cellular processes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="improvement-plan">
+            <div class="section-header">
+                <h2>Your Personalized Improvement Plan</h2>
+                <button class="refresh-btn">Refresh Plan</button>
+            </div>
+            <div class="plan-container">
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Study Resources</h3>
+                    <ul>
+                        <li>Chemistry Fundamentals - Chapter 8-10</li>
+                        <li>Biology Cell Structure - Interactive Module</li>
+                        <li>Physics Problem Set - Advanced Mechanics</li>
+                    </ul>
+                    <button class="plan-action-btn">Access Resources</button>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Recommended Schedule</h3>
+                    <ul>
+                        <li>Monday: Chemistry - 2 hours</li>
+                        <li>Wednesday: Biology - 1.5 hours</li>
+                        <li>Friday: Practice Tests - 1 hour</li>
+                        <li>Weekend: Review & Revision - 3 hours</li>
+                    </ul>
+                    <button class="plan-action-btn">Add to Calendar</button>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Focus Areas</h3>
+                    <ul>
+                        <li>Organic Chemistry Reactions</li>
+                        <li>Cell Biology & Genetics</li>
+                        <li>Thermodynamics Concepts</li>
+                        <li>Essay Structure & Analysis</li>
+                    </ul>
+                    <button class="plan-action-btn">View Practice Questions</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Improve Your Results?</h2>
+            <p>Connect with one of our expert tutors for personalized guidance on how to enhance your academic performance.</p>
+            <button class="cta-button">Schedule a Consultation</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-book-open"></i> PrepPoint
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Practice Tests</a></li>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@preppoint.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education St, Learning City</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PrepPoint. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>

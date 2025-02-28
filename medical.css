@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+.test-info, .question-section, .result-section {
+    margin-top: 20px;
+}
+#timer {
+    font-weight: bold;
+    margin-top: 10px;
+}
+#options li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    cursor: pointer;
+}
+#options li:hover {
+    background-color: #f0f0f0;
+}

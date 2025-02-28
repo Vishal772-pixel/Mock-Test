@@ -1,0 +1,409 @@
+.header {
+    background-color: #f4d16d;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    top: 0;
+    overflow: hidden;
+    height: 84px;
+    border: 1px solid black;
+
+}
+body{
+    background-color: linear-gradient(to right, #6a1b9a, #ff6f00);;
+}
+.sa{
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color:#333;
+    
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.sanket{
+    height: 200px;
+    width: 200px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav a{
+   
+    margin: 20px; /* Adjust spacing as needed */
+    text-decoration: none;
+    color: black;
+   
+    padding: 5px;
+}
+.btns a{
+    padding: 12px 25px;
+    font-size: 16px;
+    border: 1px solid #333;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    background-color:#333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* CSS Styling */
+.announcement {
+    background-color: #ffe6e6; /* Softer pink */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .announcement h2 {
+    font-size: 1.5em;
+    color: #333; /* Darker color for better contrast */
+    margin: 0;
+  }
+  
+  .cta-button {
+    background-color: #28a745; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 500px;
+    margin-top: 20px;
+  }
+  
+  .cta-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  h2 img{
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+  }
+  .wrapper{
+    
+    background-color: #FEF9F2;
+  
+    padding-left: 300px;
+    border: 1px solid black;
+  }
+  .cardaboutcontent{
+    width: 50%;
+    height: 95px;
+    color: #646F79;
+    background-color: white;
+    font-size: 16px;
+    margin-top: 70px;
+    /* border: 1px line black; */
+    box-shadow: 2px 2px 8px black;
+    padding: 5px;
+    border-radius: 8px;
+    font-family: acumin-pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+
+  
+
+
+
+
+/* Main container styling */
+.container {
+  width: 50%;
+  background-color: white;
+  box-shadow: 2px 2px 8px black;
+  padding: 20px;
+  border-radius: 8px;
+ 
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+/* Overview section styling */
+.overview {
+  width: 60%;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #333;
+  padding-top:6px;
+}
+
+/* Info grid layout */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+}
+
+/* Info box styling */
+.info-box {
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #00796b;
+}
+
+/* Specific colors for different boxes */
+#registration-date { background-color: #80deea; }
+#exam-date { background-color: #4dd0e1; }
+#salary { background-color: #26c6da; }
+#eligibility { background-color: #00acc1; }
+
+/* Button styling */
+.button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+#notification {
+  background-color: #e91e63;
+}
+
+#apply {
+  background-color: #8e24aa;
+}
+
+/* Updates section styling */
+.updates {
+  width: 35%;
+  text-align: left;
+}
+
+.update-link {
+  display: block;
+  color: #e91e63;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+/* Additional info text */
+ p {
+  font-size: 20px;
+  
+  color: black;
+  margin-top: 10px;
+}
+.cont p{
+  font-weight: 500;
+}
+
+
+/* cardmglsmhars */
+/* Card styling */
+.card {
+  width: 722.5px;
+  box-shadow: 2px 2px 8px black;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Badge styling */
+.badge {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/* Title styling */
+.title {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Stats styling */
+.stats {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.stats span {
+  margin-right: 15px;
+}
+
+/* Button styling */
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.start-button a {
+  background-color: #03A9F4;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.start-button a:hover {
+  background-color: #039BE5;
+}
+/* end */
+
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      height: auto;
+  }
+
+  nav a {
+      margin: 10px 0;
+  }
+
+  .container {
+      width: 90%;
+      margin: 10px auto;
+      padding: 15px;
+  }
+
+  .overview, .updates {
+      width: 100%;
+  }
+
+  .info-grid {
+      grid-template-columns: 1fr;
+      gap: 5px;
+  }
+
+  .info-box {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .cta-button {
+      font-size: 14px;
+      padding: 8px 10px;
+      margin-right: 0;
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  .card {
+      width: 100%;
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .card .action {
+      margin-top: 10px;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .start-button a {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+
+  .announcement {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .btns a, .sa {
+      font-size: 14px;
+      padding: 8px 15px;
+      margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      padding: 5px;
+  }
+
+  nav a {
+      margin: 5px 0;
+  }
+
+  .container {
+      padding: 10px;
+  }
+
+  .cta-button {
+      font-size: 12px;
+      padding: 6px 8px;
+  }
+
+  .info-box {
+      font-size: 12px;
+  }
+
+  .start-button a {
+      font-size: 12px;
+      padding: 6px 8px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+
+  p {
+      font-size: 12px;
+  }
+
+  .btns a, .sa {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+}
+
+  

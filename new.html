@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepPoint - Mock Test Management</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 3.96-0.56"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-3.96-0.56"/></svg>
+                <span>PrepPoint</span>
+            </div>
+            <div class="nav-links">
+                <a href="pro.html" class="active">Home</a>
+                <a href="#">Mock Tests</a>
+                <a href="practice.html">Practice</a>
+                <a href="result.html">Results</a>
+                <a href="signup.html" class="login-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Explore Mock Tests</h1>
+            <p>Prepare for success with our comprehensive collection of mock tests</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search for mock tests...">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="filters">
+            <button class="filter-btn active">Engeneering Recruitment</button>
+            <button class="filter-btn">IIT-JEE</button>
+            <button class="filter-btn">Medical</button>
+            <button class="filter-btn">CUET</button>
+            <button class="filter-btn">Olympiad</button>
+        </div>
+
+        <div class="tests-grid">
+            <div class="test-card">
+                <img src="https://images.unsplash.com/photo-1649734926695-1b1664e98842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW1hem9uJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D" alt="Mathematics">
+                <div class="card-content">
+                    <span class="subject-tag">Mathematics</span>
+                    <h3>Amazon Mock Test</h3>
+                    <div class="test-meta">
+                        <span><i class="icon">⏱</i> 3 hours</span>
+                        <span><i class="icon">📝</i> 100 questions</span>
+                        <span><i class="icon">👥</i> 1,234 attempts</span>
+                    </div>
+                    <button class="start-btn">
+                        <a href="engineering.html">Start Test</a>
+                    </button>
+                      
+                    <!-- <button class="start-btn"><a href="engineering.html"></a>Start Test</button> -->
+                </div>
+            </div>
+
+            <div class="test-card">
+                <img src="https://images.unsplash.com/photo-1662947190722-5d272f82a526?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z29vZ2xlJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D" alt="Google">
+                <div class="card-content">
+                    <span class="subject-tag">Physics</span>
+                    <h3>Google Mock Test</h3>
+                    <div class="test-meta">
+                        <span><i class="icon">⏱</i> 2.5 hours</span>
+                        <span><i class="icon">📝</i> 90 questions</span>
+                        <span><i class="icon">👥</i> 856 attempts</span>
+                    </div>
+                    <button class="start-btn">
+                        <a href="engineering.html">Start Test</a>
+                    </button>
+                    <!-- <button class="start-btn"><a href="engineering.html"></a>Start Test</button> -->
+                </div>
+            </div>
+
+            <div class="test-card">
+                <img src="tcs.png" alt="Chemistry">
+                <div class="card-content">
+                    <span class="subject-tag">Chemistry</span>
+                    <h3>TCS Mock Test</h3>
+                    <div class="test-meta">
+                        <span><i class="icon">⏱</i> 3 hours</span>
+                        <span><i class="icon">📝</i> 95 questions</span>
+                        <span><i class="icon">👥</i> 723 attempts</span>
+                    </div>
+                    <button class="start-btn">
+                        <a href="engineering.html">Start Test</a>
+                    </button>
+                    <!-- <button class="start-btn">Start Test</button> -->
+                </div>
+            </div>
+
+            <div class="test-card">
+                <img src="data:image/jpeg;base64,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" alt="Chemistry">
+                <div class="card-content">
+                    <span class="subject-tag">Chemistry</span>
+                    <h3>Microsoft Mock Test</h3>
+                    <div class="test-meta">
+                        <span><i class="icon">⏱</i> 3 hours</span>
+                        <span><i class="icon">📝</i> 95 questions</span>
+                        <span><i class="icon">👥</i> 723 attempts</span>
+                    </div>
+                    <button class="start-btn">
+                        <a href="engineering.html">Start Test</a>
+                    </button>
+                    <!-- <button class="start-btn">Start Test</button> -->
+                </div>
+            </div>
+
+            <div class="test-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/566px-Wipro_Primary_Logo_Color_RGB.svg.png?20220321185443" alt="Chemistry">
+                <div class="card-content">
+                    <span class="subject-tag">Chemistry</span>
+                    <h3>Wipro Mock Test</h3>
+                    <div class="test-meta">
+                        <span><i class="icon">⏱</i> 3 hours</span>
+                        <span><i class="icon">📝</i> 95 questions</span>
+                        <span><i class="icon">👥</i> 723 attempts</span>
+                    </div>
+                    <button class="start-btn">
+                        <a href="engineering.html">Start Test</a>
+                    </button>
+                    <!-- <button class="start-btn"><a href="engineering.html"></a>Start Test</button> -->
+                </div>
+            </div>
+
+            <div class="test-card">
+                <img src="https://i.pinimg.com/736x/a3/90/fe/a390fe6202556989933b7fbfae923d1e.jpg" alt="Chemistry">
+                <div class="card-content">
+                    <span class="subject-tag">Chemistry</span>
+                    <h3>Infosys Mock Test</h3>
+                    <div class="test-meta">
+                        <span><i class="icon">⏱</i> 3 hours</span>
+                        <span><i class="icon">📝</i> 95 questions</span>
+                        <span><i class="icon">👥</i> 723 attempts</span>
+                    </div>
+                    <button class="start-btn">
+                        <a href="engineering.html">Start Test</a>
+                    </button>
+                    <!-- <button class="start-btn">Start Test</button> -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PrepPoint. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

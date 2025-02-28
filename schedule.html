@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Schedule Planner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-image: url('img2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: -1;
+    }
+
+    .header {
+      background-color: #2d6da3;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 20px;
+    }
+
+    .schedule-form {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .schedule-display {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="time"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #2d6da3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #245d8f;
+    }
+
+    .schedule-item {
+      background-color: #f8f9fa;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border-left: 4px solid #2d6da3;
+    }
+
+    .schedule-item h3 {
+      color: #2d6da3;
+      margin-bottom: 5px;
+    }
+
+    .schedule-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .schedule-actions button {
+      width: auto;
+      padding: 5px 10px;
+      font-size: 0.9em;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+
+    .timer {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+    }
+
+    .timer h2 {
+      color: #2d6da3;
+      margin-bottom: 10px;
+    }
+
+    .timer-display {
+      font-size: 2em;
+      font-weight: bold;
+      color: #2d6da3;
+    }
+
+    .timer-controls {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .category-filter {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 4px;
+    }
+
+    .progress-tracker {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 4px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: #2d6da3;
+      transition: width 0.3s ease;
+    }
+
+    .notes-section {
+      margin-top: 10px;
+    }
+
+    .reminder-settings {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Study Schedule Planner</h1>
+  </div>
+
+  <div class="container">
+    <div class="schedule-form">
+      <h2>Add New Study Task</h2>
+      <form id="studyForm">
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <input type="text" id="topic" required>
+        </div>
+
+        <div class="form-group">
+          <label for="startTime">Start Time</label>
+          <input type="time" id="startTime" required>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duration (minutes)</label>
+          <input type="number" id="duration" min="15" step="15" required>
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <select id="priority" required>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="study">Study</option>
+            <option value="revision">Revision</option>
+            <option value="homework">Homework</option>
+            <option value="exam-prep">Exam Preparation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes</label>
+          <textarea id="notes" rows="3"></textarea>
+        </div>
+
+        <div class="form-group reminder-settings">
+          <label>
+            <input type="checkbox" id="setReminder"> Set Reminder
+          </label>
+          <input type="number" id="reminderMinutes" value="5" min="1" max="60" style="width: 60px; margin-left: 10px;">
+          minutes before
+        </div>
+
+        <button type="submit">Add to Schedule</button>
+      </form>
+
+      <div class="timer">
+        <h2>Study Timer</h2>
+        <div class="timer-display">25:00</div>
+        <div class="timer-controls">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="pauseTimer()">Pause</button>
+          <button onclick="resetTimer()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-display">
+      <h2>Today's Schedule</h2>
+      <div class="category-filter">
+        <label>Filter by Category:</label>
+        <select id="filterCategory" onchange="filterSchedule()">
+          <option value="all">All Categories</option>
+          <option value="study">Study</option>
+          <option value="revision">Revision</option>
+          <option value="homework">Homework</option>
+          <option value="exam-prep">Exam Preparation</option>
+        </select>
+      </div>
+
+      <div class="progress-tracker">
+        <h3>Daily Progress</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 0%"></div>
+        </div>
+        <p>Completed: <span id="completedTasks">0</span>/<span id="totalTasks">0</span> tasks</p>
+      </div>
+
+      <div id="scheduleList"></div>
+    </div>
+  </div>
+
+  <script>
+    // Schedule Management
+    const studyForm = document.getElementById('studyForm');
+    const scheduleList = document.getElementById('scheduleList');
+    let scheduleItems = JSON.parse(localStorage.getItem('scheduleItems')) || [];
+
+    studyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const newItem = {
+        id: Date.now(),
+        subject: document.getElementById('subject').value,
+        topic: document.getElementById('topic').value,
+        startTime: document.getElementById('startTime').value,
+        duration: document.getElementById('duration').value,
+        priority: document.getElementById('priority').value,
+        category: document.getElementById('category').value,
+        notes: document.getElementById('notes').value,
+        completed: false,
+        reminder: document.getElementById('setReminder').checked ?
+          document.getElementById('reminderMinutes').value : null
+      };
+
+      scheduleItems.push(newItem);
+      localStorage.setItem('scheduleItems', JSON.stringify(scheduleItems));
+      displaySchedule();
+      studyForm.reset();
+    });
+
+    function displaySchedule() {
+      scheduleList.innerHTML = '';
+      scheduleItems.sort((a, b) => a.startTime.localeCompare(b.startTime));
+
+      scheduleItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'schedule-item';
+        div.innerHTML = `
+                    <h3>${item.subject}</h3>
+                    <p>Topic: ${item.topic}</p>
+                    <p>Time: ${item.startTime} (${item.duration} minutes)</p>
+                    <p>Priority: ${item.priority}</p>
+                    <p>Category: ${item.category}</p>
+                    ${item.notes ? `<p>Notes: ${item.notes}</p>` : ''}
+                    <div class="schedule-actions">
+                        <button onclick="toggleComplete(${item.id})">
+                            ${item.completed ? 'Undo' : 'Complete'}
+                        </button>
+                        <button onclick="deleteItem(${item.id})" class="delete-btn">Delete</button>
+                    </div>
+                `;
+        scheduleList.appendChild(div);
+      });
+    }
+
+    function deleteItem(id) {
+      scheduleItems = scheduleItems.filter(item => item.id !== id);
+      localStorage.setItem('scheduleItems', JSON.stringify(scheduleItems));
+      displaySchedule();
+    }
+
+    // Timer functionality
+    let timeLeft = 25 * 60; // 25 minutes in seconds
+    let timerId = null;
+
+    function startTimer() {
+      if (timerId === null) {
+        timerId = setInterval(updateTimer, 1000);
+      }
+    }
+
+    function pauseTimer() {
+      clearInterval(timerId);
+      timerId = null;
+    }
+
+    function resetTimer() {
+      clearInterval(timerId);
+      timerId = null;
+      timeLeft = 25 * 60;
+      updateTimerDisplay();
+    }
+
+    function updateTimer() {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        timerId = null;
+        alert('Study session completed!');
+        resetTimer();
+      }
+      updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      document.querySelector('.timer-display').textContent =
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function filterSchedule() {
+      const category = document.getElementById('filterCategory').value;
+      const filteredItems = category === 'all' ?
+        scheduleItems :
+        scheduleItems.filter(item => item.category === category);
+      displaySchedule(filteredItems);
+    }
+
+    function updateProgress() {
+      const total = scheduleItems.length;
+      const completed = scheduleItems.filter(item => item.completed).length;
+      document.getElementById('completedTasks').textContent = completed;
+      document.getElementById('totalTasks').textContent = total;
+      const percentage = total ? (completed / total) * 100 : 0;
+      document.querySelector('.progress-fill').style.width = `${percentage}%`;
+    }
+
+    function toggleComplete(id) {
+      const item = scheduleItems.find(item => item.id === id);
+      item.completed = !item.completed;
+      localStorage.setItem('scheduleItems', JSON.stringify(scheduleItems));
+      displaySchedule();
+      updateProgress();
+    }
+
+    function checkReminders() {
+      scheduleItems.forEach(item => {
+        if (item.reminder && !item.reminderSent) {
+          const startTime = new Date();
+          startTime.setHours(...item.startTime.split(':'));
+          const reminderTime = new Date(startTime - item.reminder * 60000);
+
+          if (new Date() >= reminderTime) {
+            alert(`Reminder: ${item.subject} - ${item.topic} starts in ${item.reminder} minutes!`);
+            item.reminderSent = true;
+          }
+        }
+      });
+    }
+
+    // Set up reminder checker
+    setInterval(checkReminders, 60000); // Check every minute
+
+    // Initial display
+    displaySchedule();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrepPoint - Practice</title>
+  <link rel="stylesheet" href="practice.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>
+        <span>PrepPoint</span>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="pro.html">
+            <button class="nav-item">Home</button>
+        </a>
+        <!-- <button class="nav-item">Home</button> -->
+       <a href="new.html"> <button class="nav-item">Mock Tests</button></a>
+        <button class="nav-item active">Practice</button>
+        <a href="result.html"><button class="nav-item">Results</button></a>
+      </nav>
+      
+      <button class="login-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Login</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <h1>Practice Questions</h1>
+        <p>Sharpen your skills with topic-wise practice questions and detailed explanations</p>
+        
+        <div class="search-box">
+          <div class="search-input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="search-query" placeholder="Search for topics, subjects...">
+          </div>
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="sidebar">
+          <div class="filter-box">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+              Filters
+            </h3>
+            
+            <div class="filter-group">
+              <h4>Subject</h4>
+              <select id="subject-filter">
+                <option value="All">All Subjects</option>
+                <option value="Mathematics" selected>Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="General Aptitude">General Aptitude</option>
+                <option value="Verbal Ability">Verbal Ability</option>
+                <option value="Data Structures">Data Structures</option>
+                <option value="Algorithms">Algorithms</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <h4>Difficulty</h4>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="difficulty" value="All" checked>
+                  <span>All</span>
+                </label>
+                <label>
+                  <input type="radio" name="difficulty" value="Easy">
+                  <span>Easy</span>
+                </label>
+                <label>
+                  <input type="radio" name="difficulty" value="Medium">
+                  <span>Medium</span>
+                </label>
+                <label>
+                  <input type="radio" name="difficulty" value="Hard">
+                  <span>Hard</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <h4>Question Count</h4>
+              <input type="range" min="10" max="100" step="5" value="50" class="slider" id="question-count">
+              <div class="slider-labels">
+                <span>10</span>
+                <span>50</span>
+                <span>100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="main-content">
+          <div class="practice-grid" id="practice-items">
+            <!-- Practice items will be inserted here by JavaScript -->
+          </div>
+          
+          <div class="pagination">
+            <button class="page-btn prev-btn">Previous</button>
+            <button class="page-btn page-number active">1</button>
+            <button class="page-btn page-number">2</button>
+            <button class="page-btn page-number">3</button>
+            <button class="page-btn next-btn">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="practice.js"></script>
+</body>
+</html>

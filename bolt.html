@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamMaster - Mock Test Management</title>
+    <link rel="stylesheet" href="bolt.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 3.96-0.56"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-3.96-0.56"/></svg>
+                <span>PREPPOINT</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Tests</a>
+                <a href="#">Students</a>
+                <a href="#">Reports</a>
+                <a href="#" class="login-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Dashboard</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+                </div>
+                <h3>Total Tests</h3>
+                <div class="stat-details">
+                    <span class="value">24</span>
+                    <span class="change">+3 this week</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>Active Students</h3>
+                <div class="stat-details">
+                    <span class="value">156</span>
+                    <span class="change">+12 this month</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                </div>
+                <h3>Avg. Score</h3>
+                <div class="stat-details">
+                    <span class="value">76%</span>
+                    <span class="change">+2.3% improvement</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Time Saved</h3>
+                <div class="stat-details">
+                    <span class="value">120h</span>
+                    <span class="change">This month</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <section class="upcoming-tests">
+                <div class="section-header">
+                    <h2>Upcoming Tests</h2>
+                    <button class="link-btn">View All</button>
+                </div>
+                <div class="test-list">
+                    <div class="test-card">
+                        <div class="test-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <div class="test-info">
+                            <h3>Mathematics Mock Test</h3>
+                            <div class="test-meta">
+                                <span>2024-03-25 at 10:00 AM</span>
+                                <span class="dot">•</span>
+                                <span>2 hours</span>
+                                <span class="dot">•</span>
+                                <span>45 participants</span>
+                            </div>
+                        </div>
+                        <button class="primary-btn">Manage</button>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <div class="test-info">
+                            <h3>Science Final Prep</h3>
+                            <div class="test-meta">
+                                <span>2024-03-27 at 2:00 PM</span>
+                                <span class="dot">•</span>
+                                <span>1.5 hours</span>
+                                <span class="dot">•</span>
+                                <span>32 participants</span>
+                            </div>
+                        </div>
+                        <button class="primary-btn">Manage</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="test-results">
+                <div class="section-header">
+                    <h2>Recent Test Results</h2>
+                    <button class="link-btn">View All</button>
+                </div>
+                <div class="result-list">
+                    <div class="result-card">
+                        <div class="result-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                        </div>
+                        <div class="result-info">
+                            <h3>Physics Mid-Term</h3>
+                            <div class="result-meta">
+                                <span>Avg. Score: 82%</span>
+                                <span class="dot">•</span>
+                                <span>38 participants</span>
+                                <span class="improvement">+5%</span>
+                            </div>
+                        </div>
+                        <button class="secondary-btn">Details</button>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                        </div>
+                        <div class="result-info">
+                            <h3>Chemistry Practice</h3>
+                            <div class="result-meta">
+                                <span>Avg. Score: 75%</span>
+                                <span class="dot">•</span>
+                                <span>42 participants</span>
+                                <span class="improvement">+3%</span>
+                            </div>
+                        </div>
+                        <button class="secondary-btn">Details</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
